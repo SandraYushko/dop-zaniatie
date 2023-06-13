@@ -8,15 +8,14 @@ type CityPropsType = {
 }
 
 export const City = (props: CityPropsType) => {
-    // пока это пропускам
-    // const mappedMoney = props.data.map((el: MoneyType, index) => (
-    //     <CurrentBankomat
-    //         key={index}
-    //         money={el}
-    //     />
-    // ))
+    const mappedMoney = props.data.map((el: MoneyType, index) => (
+        <CurrentBankomat
+            key={index}
+            money={el}
+        />
+    ))
 
-    const mappedMoney = props.data.map(el => {
+  /*  const mappedMoney = props.data.map(el => {
         return (
             <div>
                 <div>{el.banknotes}</div>
@@ -24,20 +23,12 @@ export const City = (props: CityPropsType) => {
                 <div>{el.number}</div>
             </div>
         )
-    })
+    })*/
 
     return (
         <Wrapper>{mappedMoney}</Wrapper>
     )
 }
-
-
-/*const Wrapper = styled.div`
-display: flex;
-flex - direction:row;
-flex - wrap:wrap;
-font - size:30px;`*/
-
 
 const Wrapper = styled.div`
 display: flex;
